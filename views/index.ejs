@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family:"Arial";
+        }        
+    </style>
+</head>
+<body>
+    <h1>Documentation for the POKEMON API</h1>
+    <p>Information about the pokemon api goes here</p>
+
+    <table>
+        <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><a href="/api/pokemon/all">/api/pokemon/all</a></td>
+            <td>Get all pokemon</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/api/pokemon/type/:typeToFind</td>
+            <td>Get pokemon by type</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/api/pokemon/add</td>
+            <td>Insert a pokemon into the database</td>
+        </tr>
+        <tr>
+            <td>PUT</td>
+            <td>/api/pokemon/update/:mongoDocId</td>
+            <td>Updates the specified pokemon</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/api/pokemon/delete/:mongoDocId</td>
+            <td>Deletes the specified pokemon</td>
+        </tr>        
+    </table>
+    
+
+    <hr/>
+    <p>This code is testing POST endpoints, ignore for now</p>
+
+    <form action="/api/pokemon/add" method="POST">
+        <input type="text" placeholder="Enter pokemon name" name="pokeName"/>
+        <input type="text" placeholder="Enter attack" name="attackPower"/>        
+    </form>
+
+    <button id="btnInsert">Test Inserting a Pokemon</button>
+
+    <button id="btnGetPokemon">Get All Pokemon</button>
+    <section id="results"></section>
+
+    <!-- NOTE: app.js is located in /public/app.js -->
+    <script type="text/javascript" src="app.js"></script>
+
+
+
+</body>
+</html>
